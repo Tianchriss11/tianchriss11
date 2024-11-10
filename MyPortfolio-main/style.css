@@ -1,0 +1,547 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #6F4436;
+  color: white;
+  overflow-x: hidden;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(22, 4, 4);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: rgb(31, 4, 4);
+}
+
+a:hover {
+  color: #DFCCAF;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #DFCCAF;
+
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(235, 232, 232);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  background-color: 	#DFCCAF;
+  box-shadow: 0px 4px 8px rgba(41, 19, 165, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  margin-bottom: 3rem;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+
+/* Back2Top Button */
+/* Style for the Back to Top button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #968a47; /* Customize the button background color */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%; /* Round shape */
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for button */
+#backToTop:hover {
+  background-color: #83852a; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Style the image (arrow or logo) inside the button */
+#backToTop img {
+  width: 30px; /* Adjust the size of the image */
+  height: 30px; /* Adjust the size of the image */
+  object-fit: contain; /* Ensure the image scales well inside the button */
+}
+
+/* Optional: Add a subtle shadow when the button is hovered */
+#backToTop:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+/* Style for the button */
+.btn-container {
+  margin-top: -10px;
+}
+.c-btn {
+  background-color: #DFCCAF; /* Customize the background color */
+  color: rgb(19, 17, 17);
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-radius: 250px; /* Round corners for a pill shape */
+  transition: all 0.3s ease; /* Smooth transition for scaling */
+  cursor: pointer;
+}
+
+/* Hover effect for scaling */
+.c-btn:hover {
+  transform: scale(1.1); /* Scale the button to 110% of its original size */
+  background-color: #6F4436; /* Change background color on hover */
+  box-shadow: 0 5px 15px rgba(231, 225, 225, 0.966); /* Subtle shadow on hover */
+}
+
+/* If you have a custom style for the <a> inside the button */
+.c-btn a {
+  display: inline-block;
+  color: rgb(10, 10, 10); /* White text color inside the button */
+  text-decoration: none;
+  width: 130;
+  height: 100%;
+  line-height: 1.5; /* Adjust the height of the text */
+}
+
+
+/* Add skill percentage text */
+.skill-percentage {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f1e9e9;
+}
+
+/* Style the progress bar container */
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 8px;
+  margin-top: 5px;
+}
+
+/* Style the progress bar itself */
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the progress */
+  border-radius: 20px;
+  transition: width 0.5s ease; /* Smooth animation when width changes */
+}
+
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  margin-top: 2rem;
+
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+  background-color: transparent;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: transparent;
+  border-radius: 2rem;
+  border: rgb(58, 58, 58) 0.1rem solid;
+  border-color: #6F4436;
+  text-align: center;
+  transition: transform 200ms ease-in-out;
+}
+
+.details-container {
+  color: #6F4436;
+}
+
+.details-container:hover {
+  transform: scale(1.05);
+  background-color: #6F4436;
+  color: white;
+
+}
+
+.details-container:hover p {
+  transform: scale(1.05);
+  background-color: #6F4436;
+  color: white;
+
+}
+
+.details-container:hover .experience-sub-title {
+  color: white;
+
+}
+
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.experience-sub-title {
+  color: rgb(10, 10, 10);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  margin-top: 3rem;
+
+}
+
+.color-container {
+  border-color: #6F4436;
+  background: transparent;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  height: 70vh;
+}
+
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(44, 43, 43) 0.1rem solid;
+  border-color: #6F4436;
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-upper-container:hover {
+  background-color: #6F4436;
+  
+}
+
+.contact-info-upper-container:hover a{
+  color: #DFCCAF;
+  
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-info-container a {
+  color: #6F4436;
+}
+
+.contact-info-container:hover a {
+  color: #DFCCAF
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+  color: #DFCCAF;
+}
